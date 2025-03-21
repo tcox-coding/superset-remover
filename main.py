@@ -27,10 +27,10 @@ for word in new_nono_words:
     if word == second_word:
       continue
     if word in second_word:
-      words.append(word)
-      break
+      words.append(second_word)
 
 for word in words:
+  print(word)
   new_nono_words.remove(word)
 
 with open('new_bad_words.json', 'w') as f:
