@@ -21,6 +21,20 @@ new_nono_words_set = set(new_nono_words)
 new_nono_words = list(new_nono_words_set)
 new_nono_words.sort()
 
+words = []
+for word in new_nono_words:
+  for second_word in new_nono_words:
+    if word == second_word:
+      continue
+    if word in second_word:
+      words.append(word)
+      break
+
+for word in words:
+  new_nono_words.remove(word)
 
 with open('new_bad_words.json', 'w') as f:
   json.dump(new_nono_words, f)
+
+print(':)')
+
