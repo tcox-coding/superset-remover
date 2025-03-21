@@ -30,7 +30,7 @@ for word in new_nono_words:
       words.append(second_word)
 
 for word in words:
-  print(word)
+  # print(word)
   new_nono_words.remove(word)
 
 with open('new_bad_words.json', 'w') as f:
